@@ -1051,33 +1051,35 @@
 
       const handleDifficulty = () => {
         const buttons = document.querySelectorAll(".difficultySelect");
-        if (gameState.parameters[0].difficulty === null) {
-          buttons.forEach((a) => {
+
+        buttons.forEach((a) => {
+          if (gameState.parameters[0].difficulty === null) {
             a.addEventListener("click", () => {
               // Get data index of button
               const index = a.dataset.index;
-              // Set difficulty to index
-
-              // Set difficulty to data index
-              // String to update index
-
-              if (index === "0") {
-                gameState.parameters[0].difficulty = "easy";
-              } else if (index === "1") {
-                gameState.parameters[0].difficulty = "medium";
-              } else if (index === "2") {
-                gameState.parameters[0].difficulty = "hard";
-              } else if (index === "3") {
-                gameState.parameters[0].difficulty = "extreme";
+              if (gameState.parameters[0].difficulty === null) {
+                if (index === "0") {
+                  gameState.parameters[0].difficulty = "easy";
+                  a.id = "selected";
+                } else if (index === "1") {
+                  gameState.parameters[0].difficulty = "medium";
+                  a.id = "selected";
+                } else if (index === "2") {
+                  gameState.parameters[0].difficulty = "hard";
+                  a.id = "selected";
+                } else if (index === "3") {
+                  gameState.parameters[0].difficulty = "extreme";
+                  a.id = "selected";
+                }
+                console.log(gameState.parameters[0].difficulty);
+  
+                // Update modal
+                console.log("Difficulty: " + gameState.parameters[0].difficulty);
+                updateModal();
               }
-              console.log(gameState.parameters[0].difficulty);
-
-              // Update modal
-              console.log("Difficulty: " + gameState.parameters[0].difficulty);
-              updateModal();
             });
-          });
-        }
+          } 
+        });
       };
 
       // Click inside modal for name or difficulty
