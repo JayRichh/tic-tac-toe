@@ -1,33 +1,42 @@
 /*Start Import*/
 @font-face {
-  font-family: 'Im Wunderland';
+  font-family: "Im Wunderland";
   font-style: normal;
   font-weight: 400;
-  src: local('Im Wunderland'), url('https://fonts.cdnfonts.com/s/14963/Im Wunderland.woff') format('woff');
+  src: local("Im Wunderland"),
+    url("https://fonts.cdnfonts.com/s/14963/Im Wunderland.woff") format("woff");
 }
 @font-face {
-  font-family: 'Im Wunderland';
+  font-family: "Im Wunderland";
   font-style: normal;
   font-weight: 400;
-  src: local('Im Wunderland'), url('https://fonts.cdnfonts.com/s/14963/Im Wunderland Spaced Out.woff') format('woff');
+  src: local("Im Wunderland"),
+    url("https://fonts.cdnfonts.com/s/14963/Im Wunderland Spaced Out.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Im Wunderland';
+  font-family: "Im Wunderland";
   font-style: italic;
   font-weight: 400;
-  src: local('Im Wunderland'), url('https://fonts.cdnfonts.com/s/14963/Im Wunderland Italic.woff') format('woff');
+  src: local("Im Wunderland"),
+    url("https://fonts.cdnfonts.com/s/14963/Im Wunderland Italic.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Im Wunderland';
+  font-family: "Im Wunderland";
   font-style: normal;
   font-weight: 700;
-  src: local('Im Wunderland'), url('https://fonts.cdnfonts.com/s/14963/Im Wunderland Bold.woff') format('woff');
+  src: local("Im Wunderland"),
+    url("https://fonts.cdnfonts.com/s/14963/Im Wunderland Bold.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Im Wunderland';
+  font-family: "Im Wunderland";
   font-style: italic;
   font-weight: 700;
-  src: local('Im Wunderland'), url('https://fonts.cdnfonts.com/s/14963/Im Wunderland Bold Italic.woff') format('woff');
+  src: local("Im Wunderland"),
+    url("https://fonts.cdnfonts.com/s/14963/Im Wunderland Bold Italic.woff")
+      format("woff");
 }
 /*Finish Import*/
 :root {
@@ -67,7 +76,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Im Wunderland', sans-serif;
+  font-family: "Im Wunderland", sans-serif;
   line-height: 0.65;
 }
 header {
@@ -119,7 +128,8 @@ main {
   transition-delay: 3s;
   transition: var(--transition-long);
 }
-span, p {
+span,
+p {
   font-size: 2em;
 }
 input {
@@ -136,24 +146,24 @@ input {
   justify-content: space-around;
   gap: var(--large-gap);
 }
-  #playersModal > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    z-index: 2;
-    padding: 2em;
-    border-radius: 15px;
-  }
-  #playersModal #inputContainer {
-    gap: 2em;
-    height: 50%;
-  }
-  #playersModal #playerTwoContent {
-    gap: 5px;
-  }
+#playersModal > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+  padding: 2em;
+  border-radius: 15px;
+}
+#playersModal #inputContainer {
+  gap: 2em;
+  height: 50%;
+}
+#selected {
+  background-color: #90ef7d;
+}
 #modalBackdrop {
   position: absolute;
   top: 0;
@@ -164,7 +174,6 @@ input {
   z-index: 1;
 }
 #turnDisplay {
-
 }
 #gameWrapper {
   display: flex;
@@ -196,7 +205,8 @@ input {
   text-align: center;
   font-size: 10em;
 }
-#playerScore, #oponentScore {
+#playerScore,
+#oponentScore {
   font-size: 4em;
   transition: 1s;
 }
