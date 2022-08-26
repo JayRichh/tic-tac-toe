@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header" class="">
+      <h1>Tic Tac Toe</h1>
+      <a href="#" id="playButton" class="btn">Play?</a>
+      <script src="copyscriptcopy.js" defer></script>
+    </header>
+
+    <main id="main" class="hidden">
+      <div class="modal hidden" id="playersModal">
+        <div id="inputContainer">
+          <span>Enter Player One Name:</span>
+          <input type="text" id="playerOneInput" required />
+        </div>
+        <div id="playerTwoContent">
+          <span>Choose AI Difficulty</span>
+          <a href="#" id="button" class="btn difficultySelect" data-index="0">Easy</a>
+          <a href="#" id="button" class="btn difficultySelect" data-index="1">Medium</a>
+          <a href="#" id="button" class="btn difficultySelect" data-index="2">Hard</a>
+          <a href="#" id="button" class="btn difficultySelect" data-index="3">Extreme</a>
+        </div>
+      </div>
+
+      <span id="turnDisplay"></span>
+      <span id="gameStatus"></span>
+
+      <div id="gameWrapper">
+        <div id="scoreBoard">
+          <p id="playerName"></p>
+          <span id="playerScore" class="player"></span>
+        </div>
+
+        <div id="gameBoard" class="gameboard"></div>
+
+        <div id="scoreBoard" class="oponentScore">
+          <p>AI Score:</p>
+          <span id="oponentScore" class="oponentScore"></span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p></p>
+    </footer>
+  </body>
+</html>

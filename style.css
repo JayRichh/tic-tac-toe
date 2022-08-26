@@ -1,0 +1,171 @@
+@import url("http://fonts.cdnfonts.com/css/im-wunderland");
+
+:root {
+  --small-gap: 1em;
+  --large-gap: 1.5em;
+  --transition: 1s;
+  --transition-long: 3s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+* > .hover {
+  background-color: rgba(143, 255, 161, 0.3);
+}
+*.active {
+  top: 5%;
+  transition: var(--transition);
+}
+* > a.btn.active {
+  display: none;
+  transition: var(--transition);
+}
+* > div.hidden {
+  display: none;
+  transition: var(--transition);
+}
+* > main.hidden {
+  transition: var(--transition-long);
+  display: none;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Im Wunderland", sans-serif;
+  line-height: 0.65;
+}
+header {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 35%;
+  text-align: center;
+}
+a.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  border: 0.1em solid #000000;
+  margin: 2em 1em 1em 1em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+}
+a.btn:hover {
+  color: #1a2515;
+  background-color: #cccccc;
+  transform: translateY(-5%);
+}
+@media all and (max-width: 30em) {
+  a.btn {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+h1 {
+  font-size: 5em;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3em;
+  transition-delay: 3s;
+  transition: var(--transition-long);
+}
+span, p {
+  font-size: 2em;
+}
+input {
+  padding: 5px;
+  font-size: large;
+}
+
+#playersModal {
+  position: absolute;
+  height: 30em;
+  width: 40em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+  #playersModal > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    padding: 2em;
+    border-radius: 15px;
+  }
+  #playersModal #inputBody {
+    gap: 3em;
+    height: 50%;
+  }
+  #playersModal #playerTwoContent {
+    gap: 5px;
+  }
+#modalBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+#turnDisplay {
+
+}
+#gameWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+}
+#scoreBoard {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+}
+#gameBoard {
+  height: 450px;
+  width: 450px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 2px solid;
+}
+#gameBoard > div {
+  border: 1px solid #0000004d;
+  text-align: center;
+  font-size: 10em;
+}
+#playerScore, #oponentScore {
+  font-size: 4em;
+  transition: 1s;
+}
